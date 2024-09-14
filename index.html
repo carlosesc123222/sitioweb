@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Terra - Viva México</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="menu container">
+            <a href="#" class="logo">Patria</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu-btn.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicio</a></li>
+                    <li><a href="#">Información</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <div class="content">
+                <h1>Viva México</h1>
+                <p>Día de la Independencia</p>
+                <button id="modalBtn" class="btn-1">Buscar Información</button>
+                <button id="poemaBtn" class="btn-1">Generar Poema</button>
+            </div>
+            <img src="img/mariachi.png" alt="">
+        </div>
+    </header>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container">
+                <h1>"Busque información del 15 de septiembre"</h1>
+                <p>GENERE SU CONSULTA AQUÍ ↓</p>
+                <input type="text" id="descripcion" placeholder="Describe el sujeto...">
+                <button onclick="buscar()">BUSCAR</button>
+                <button onclick="limpiar()">LIMPIAR</button>
+
+                <div>
+                    <h2>Resultado</h2>
+                    <textarea id="resultado" cols="50" rows="3" readonly></textarea>
+                </div>
+
+                <div>
+                    <h2>Información adicional</h2>
+                    <textarea id="modelos" cols="50" rows="6" readonly></textarea>
+                </div>
+
+                <div>
+                    <h2>Imagen relacionada a su búsqueda</h2>
+                    <img id="imagen" src="" alt="Imagen">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="poemaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container">
+                <h1>Generador de Poemas Mexicanos</h1>
+                <p>Ingrese una palabra para generar un poema</p>
+                <input type="text" id="inputText" placeholder="Ingrese una palabra...">
+                <button onclick="generatePoem()">Generar Poema</button>
+                <div>
+                    <h2>Su poema es:</h2>
+                    <textarea id="output" cols="50" rows="6" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="portafolios container">
+        <h2>Datos</h2>
+        <div class="portafolio">
+            <img src="img/mexicana.jpeg" alt="">
+            <div class="portafolio-1">
+                    <h3>
+                       Noche de Independencia
+                    </h3>
+                    <p>
+                        La Noche de Independencia, especialmente en México, se celebra con gran entusiasmo y orgullo.
+                        La celebración comienza la noche del 15 de septiembre con la recreación del Grito de Dolores, 
+                        que fue el llamado a la independencia hecho por Miguel Hidalgo. Este evento suele ser liderado 
+                        por el presidente en el Zócalo de Ciudad de México y se acompaña de fuegos artificiales, música y baile.
+                        El 16 de septiembre, el día de la independencia, hay desfiles cívico-militares en muchas ciudades, que
+                        presentan a las fuerzas armadas, grupos escolares y civiles celebrando el orgullo nacional.
+                    </p>
+                    <a href="#" class="btn-2">informacion</a>
+            </div>
+        </div>
+        <div class="portafolio">
+             
+            <div class="portafolio-2">
+                    <h3>
+                        Comida
+                    </h3>
+                    <p>
+                        En la Noche de Independencia, especialmente en México, se suelen preparar y disfrutar una
+                        variedad de platillos tradicionales como tacos que se pueden rellenar con diferentes tipos 
+                        de carne, como carne asada, carnitas o pollo, y se sirven con salsas y guarniciones chiles 
+                        en nogada que son chiles poblanos rellenos de picadillo (carne de res y cerdo mezclada con 
+                        frutas y especias) cubiertos con una salsa de nuez y espolvoreados con granada pozole que es
+                        un guiso a base de maíz hominy con carne (pollo, cerdo o res).
+                    </p>
+                   <a href="#" class="btn-2">informacion</a>                 
+            </div>
+            <img src="img/comida.jpeg" alt="">
+        </div>  
+        <div class="portafolio">
+            <img src="img/oo.jpeg" alt="">
+            <div class="portafolio-3">
+                    <h3>
+                        Dia de la Independencia
+                    </h3>
+                    <p>
+                        La independencia de México se declaró el 16 de septiembre de 1810, cuando Miguel Hidalgo, 
+                        un sacerdote católico, dio el famoso "Grito de Dolores", marcando el inicio de la lucha 
+                        por la independencia de México del dominio español. La independencia se consolidó el 27 
+                        de septiembre de 1821, cuando se firmó el Acta de Independencia y México se convirtió en 
+                        una nación independiente.
+                    </p>
+                    <a href="#" class="btn-2">informacion</a>
+            </div>
+        </div>
+        <div class="portafolio"> 
+            
+        <div class="portafolio-4">
+                <h3>
+                    Heroes
+                </h3>
+                <p>
+                     Los héroes de la independencia de México incluyen Miguel Hidalgo y Costilla, quien dio el "Grito
+                     de Dolores" el 16 de septiembre de 1810, José María Morelos y Pavón, Vicente Guerrero, Agustín
+                     de Iturbide, Juan Aldama e Ignacio Allende. Son recordados por su papel crucial en la lucha por 
+                     la libertad de México.
+                </p>
+                <a href="#" class="btn-2">informacion</a>                 
+        </div>
+        <img src="img/he.jpeg" alt="">
+    </div>  
+    </section>
+    <footer></footer>
+        <div class="container">
+            <div class="info">
+                <div class="info-content">
+                    <hr>
+                    <div class="enlaces">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var poemaModal = document.getElementById("poemaModal");
+
+        var btn = document.getElementById("modalBtn");
+        var poemaBtn = document.getElementById("poemaBtn");
+
+        var span = document.getElementsByClassName("close");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        poemaBtn.onclick = function() {
+            poemaModal.style.display = "block";
+        }
+
+        for (var i = 0; i < span.length; i++) {
+            span[i].onclick = function() {
+                modal.style.display = "none";
+                poemaModal.style.display = "none";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal || event.target == poemaModal) {
+                modal.style.display = "none";
+                poemaModal.style.display = "none";
+            }
+        }
+
+        function buscar() {
+            const descripcion = document.getElementById("descripcion").value.toLowerCase();
+            const resultado = document.getElementById("resultado");
+            const modelos = document.getElementById("modelos");
+            const imagen = document.getElementById("imagen");
+
+            if (descripcion.includes("grito") || descripcion.includes("dolores") || 
+                descripcion.includes("mercurial") ) {
+                resultado.value = "Miguel Hidalgo y Costilla";
+                modelos.value = "Hazañas:\n" +
+                                "- Sacerdote que inició el movimiento de independencia en México.\n" +
+                                "- Grito de Dolores\n" +
+                                "- Formación de un Ejército Popular";
+                imagen.src = "img/MiguelHidalgo.jpg";
+            } else if (descripcion.includes("movimiento") || descripcion.includes("campañas militares") || 
+                       descripcion.includes("conquista de oaxaca") || descripcion.includes("toma de cuautla")) {
+                resultado.value = "José María Morelos.";
+                modelos.value = "Hazañas:\n" +
+                                "- Morelos resistió el cerco impuesto por las tropas realistas, demostrando su capacidad táctica y aumentando la moral de los insurgentes.\n" +
+                                "- Morelos capturó la ciudad de Oaxaca, una victoria significativa que fortaleció la causa insurgente al asegurar recursos y consolidar territorio.";
+                               
+                imagen.src = "img/Morelos.jpg";
+            } else if (descripcion.includes("contra parte") || descripcion.includes("enemigo") || 
+                       descripcion.includes("españoles") || descripcion.includes("lideraban")) {
+                resultado.value = "Virrey Francisco Javier Venegas.";
+                modelos.value = "Hazañas:\n" +
+                                "- Era el Virrey del Nuevo Reino de Galicia (actuales estados de Jalisco, Nayarit, Zacatecas, Aguascalientes y Guanajuato) cuando comenzó la Guerra de Independencia. Venegas tuvo que enfrentar la rebelión insurgente y trató de mantener el control en la región.";
+                imagen.src = "img/Franciscos.jpg";
+            } else if (descripcion.includes("noche") || descripcion.includes("independencia")) {
+                resultado.value = "Noche de Independencia.";
+                modelos.value = "Suceso:\n" +
+                                "- La celebración principal tiene lugar en la noche del 15 de septiembre. En la Ciudad de México y en muchas otras ciudades y pueblos, se llevan a cabo eventos conmemorativos y festividades.\n" +
+                                "- A las 11:00 p.m., el Presidente de México da el tradicional Grito de Independencia desde el balcón del Palacio Nacional en el Zócalo de la Ciudad de México.";
+                imagen.src = "img/noche.jpg";
+            } else {
+                resultado.value = "No se pudo identificar el Heroe Nacional.";
+                modelos.value = "";
+                imagen.src = ""; 
+            }
+        }
+
+        function limpiar() {
+            document.getElementById("descripcion").value = "";
+            document.getElementById("resultado").value = "";
+            document.getElementById("modelos").value = "";
+            document.getElementById("imagen").src = "";
+        }
+
+        function generatePoem() {
+            const inputText = document.getElementById("inputText").value.toLowerCase();
+            const output = document.getElementById("output");
+
+            if (inputText.includes("grito")) {
+                output.value = "¡Grito de Dolores, eco en la noche,\n" +
+                               "La libertad llamaste, rompiste el broche,\n" +
+                               "De la opresión despiadada, de la injusticia cruel,\n" +
+                               "Hidalgo, sacerdote, marcaste un sendero fiel.";
+            } else if (inputText.includes("noche")) {
+                output.value = "En la noche estrellada, bajo el cielo de añil,\n" +
+                               "México se levanta, con un espíritu viril,\n" +
+                               "El Grito retumba, en cada corazón,\n" +
+                               "Es la voz de un pueblo, clamando emancipación.";
+            } else if (inputText.includes("héroes")) {
+                output.value = "Héroes valientes, de historia sin fin,\n" +
+                               "De Hidalgo a Morelos, con fuego en la piel,\n" +
+                               "Libertad era el grito, justicia el clamor,\n" +
+                               "En cada batalla, entregaron su valor.";
+            } else {
+                output.value = "No se encontró un poema relacionado con esa palabra.";
+            }
+        }
+    </script>
+</body>
+</html>
